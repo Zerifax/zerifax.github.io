@@ -1,0 +1,42 @@
+
+<!-- saved from url=(0032)https://vrflad.com/shoutout.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+h2 {
+	font-family: 'Berlin Sans FB';
+	font-weight: normal;
+	color: white;
+	font-size: 48px;
+	margin: 6;
+	text-shadow: -1px -1px 8px white;
+	opacity: 0.99;
+	padding-top: 450px;
+}
+</style>
+<title>Streamer.bot clip player</title>
+ 
+<script>
+//Thanks for the help from Nate1280 and WhipStickGoStop!
+
+function showVideo () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const url = urlParams.get('url');
+	
+	document.getElementById('embed').src = url;
+}
+
+</script>
+
+
+<script src="chrome-extension://enegjkbbakeegngfapepobipndnebkdk/web3_insights_page.js"></script></head>
+<body onload="showVideo();">
+
+
+<iframe id="embed" src="" frameborder="0" allowfullscreen="true" scrolling="no" height="270" width="480"></iframe>
+
+
+</body></html>
