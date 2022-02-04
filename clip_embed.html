@@ -1,4 +1,5 @@
 
+<!-- saved from url=(0032)https://vrflad.com/shoutout.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <style>
 body {
@@ -24,8 +25,10 @@ h2 {
 function showVideo () {
     const urlParams = new URLSearchParams(window.location.search);
     const url = urlParams.get('url');
+	const width = urlParams.get('width');
+	const height = urlParams.get('height');
 	
-	const frame = '<iframe id="embed" src="' + url + '" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>'
+	const frame = '<iframe id="embed" src="' + url + '" frameborder="0" allowfullscreen="true" scrolling="no" height="' + height + '" width="' + width + '"></iframe>'
 	
 	document.getElementById('videocontainer').innerHTML = frame;
 }
@@ -36,7 +39,7 @@ function showVideo () {
 <script src="chrome-extension://enegjkbbakeegngfapepobipndnebkdk/web3_insights_page.js"></script></head>
 <body onload="showVideo();">
 
-<div id="videocontainer" style="position:absolute; left: 0px; top: 0px; width: 480px;z-index:10">
+<div id="videocontainer" style="position:absolute; left: 0px; top: 0px; right: 0; bottom: 0; z-index:10">
 </div>
 
 
