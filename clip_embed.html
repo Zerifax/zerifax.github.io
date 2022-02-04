@@ -1,5 +1,4 @@
 
-<!-- saved from url=(0032)https://vrflad.com/shoutout.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <style>
 body {
@@ -26,7 +25,9 @@ function showVideo () {
     const urlParams = new URLSearchParams(window.location.search);
     const url = urlParams.get('url');
 	
-	//document.getElementById('embed').src = url;
+	const frame = '<iframe id="embed" src="' + url + '" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>'
+	
+	document.getElementById('videocontainer').innerHTML = frame;
 }
 
 </script>
@@ -35,8 +36,8 @@ function showVideo () {
 <script src="chrome-extension://enegjkbbakeegngfapepobipndnebkdk/web3_insights_page.js"></script></head>
 <body onload="showVideo();">
 
-
-<iframe id="embed" src="https://clips.twitch.tv/embed?clip=NimbleBloodyHerbsKippa-1SVKCVYeFNhlHYZG&parent=zerifax.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+<div id="videocontainer" style="position:absolute; left: 0px; top: 0px; width: 480px;z-index:10">
+</div>
 
 
 </body></html>
